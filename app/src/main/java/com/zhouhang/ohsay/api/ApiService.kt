@@ -24,8 +24,8 @@ interface ApiService {
     /**
      * 收款账户设置
      */
-    @POST("/api/rider/account/update")
+    @POST("/api/getCode/")
     @FormUrlEncoded
-    fun setBankAccount(@Field("attribute") attribute: String): Observable<BaseBean<Unit>>
+    fun requestCode(@Field("mobile") mobile: String, @Field("type") type: String): Observable<BaseBean<Unit>>
 
 }
